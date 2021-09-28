@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.freakchick</groupId>
+    <groupId>io.github.freakchick</groupId>
     <artifactId>orange</artifactId>
     <version>1.0</version>
 
@@ -51,6 +51,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <defaultGoal>compile</defaultGoal>
     </build>
 
     <dependencies>
@@ -86,5 +87,15 @@
 
     </dependencies>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
 </project>
